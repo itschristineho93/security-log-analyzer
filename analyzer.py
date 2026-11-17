@@ -19,3 +19,6 @@ print("Failed login attempts by IP:")
 
 for ip, count in failed_ips.items():
 	print(f"{ip}: {count}")
+
+	if count >= 3:
+		print(f"ALERT: Potential brute-force activity detected from {ip}")
